@@ -1,15 +1,3 @@
-/*
-style="color:#f8f8fb;"
-style="color:#e4e4e5;"
-color:#FFC300;
-color:#424346;
-style="color:#03050c;"
-*/
-
-
-
-
-
 *{
   box-sizing: border-box;
 }
@@ -19,6 +7,7 @@ body{
   color: #03050c;
   font-family: "Open Sans", sans-serif;
 }
+/*HEADER STYLES*/
 
 header{
   display: flex;
@@ -68,27 +57,38 @@ header nav ul li a{
   color: #03050c;
 }
 
-section img{
- 
-  flex-shrink: 1;
-}
 
-section div img{
-  border: #03050c 1px solid;
-}
 
+
+
+
+
+
+
+
+/*MAIN STYLES*/
 section{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3%;
+  padding: 3%;
+  
 }
 
-.section-row-reverse{
+section div img{
+  border: #03050c 1px solid;
+  width: 100%;
+}
+
+section div p{
+  text-align: justify;
+}
+
+/*.section-row-reverse{
   display: flex;
   flex-direction: row-reverse;
-}
+}*/
 
 section h2{
   font-family: "Oswald", sans-serif;
@@ -96,14 +96,13 @@ section h2{
   font-weight: 400;
 }
 
-section .section{
-  display: flex;
-  flex-direction: row;
-}
-
 section .section-column{
   flex-direction: column;
 }
+
+
+
+/*forms, links, buttons for contact section*/
 
 section div form{
   display: flex;
@@ -114,9 +113,8 @@ section div form{
 }
 
 section div form > *{
-margin: 5px 0;
-
-}
+  margin: 5px 0;
+  }
 
 section div form button{
   background-color: #03050c;
@@ -124,7 +122,6 @@ section div form button{
   border: #03050c 1px solid;
   width: 50px;
   padding: 2px;
-  
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -136,18 +133,80 @@ section div form text-area{
   margin: 0 0 20px 0;
 }
 
+section div a{
+  text-decoration: none;
+  color: #03050c;
+}
+
+section div form input[type=text]{
+  color: #03050c;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/*Styling for projects section*/
+section div .card{
+  align-items: flex-start;
+  
+}
+
+section div .card ul li{
+  list-style-type: square;
+}
+
+section div .card h3{
+  font-family: "Oswald";
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+section div .project-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.1em;
+  align-items: center;
+}
+
+
+
+
+
+
+
+/*End styling for projects section*/
+
 
 footer{
   background-color: #03050c;
   color:#f8f8fb;
   padding: 0;
   margin: 0;
-  height: 150px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
+
+section div .card:last-of-type{
+  padding-bottom: 3%;
+}
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY*/
 
 @media all and (min-width: 600px){
   section .section{
@@ -156,11 +215,10 @@ footer{
     justify-content: center;
     align-items: center;
   }
-
-  /*section .col{
-    flex-direction: column;
-    display: flex;
-  }*/
+  
+  section >*{
+    max-width: 800px;
+  }
 
   header{
     flex-direction: row;
@@ -168,8 +226,59 @@ footer{
     padding: 18px;
   }
 
-  /*section:last-of-type{
+  header nav ul li a:hover{
+    color: #FFC300;
+  }
+
+  section div a:hover{
+    color: #FFC300;
+  }
+
+  section div form button:first-of-type:hover{
+    color: #FFC300;
+  }
+
+
+/*LAYOUT CHANGES*/
+section .section{
+  display: flex;
+  flex-direction: row;
+}
+section div .info-sub{
+  margin: 0 15px 0 0;
+  align-self: flex-start;
+}
+
+section div .card{
+  margin: 3%;
+  align-items: flex-start;
+}
+section div .card:last-of-type{
+    padding: 0;
+  }
+}
+
+section div .card{
+  justify-content: space-between;
+}
+ /*
+ section:last-of-type{
     flex-direction: row;
     padding-bottom: 15px;
+  
+  
+  
+  WHEN I COME BACK FROM THE BREAK
+
+  FIX PLACEHOLDERS
+  SWITCH IMAGE TO OTHER SIDE
+  CREATE FLEXBOX FOR FIRST SECTION
+  WRITE FOR THE PROJECTS
+  
+  
+  
+  
+  
+  
   }*/
 }
