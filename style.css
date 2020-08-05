@@ -256,11 +256,14 @@ section div .card{
 section div .card:last-of-type{
     padding: 0;
   }
+
+  section div .card{
+    justify-content: space-between;
+  }
 }
 
-section div .card{
-  justify-content: space-between;
-}
+
+
  /*
  section:last-of-type{
     flex-direction: row;
@@ -280,5 +283,5 @@ section div .card{
   
   
   
-  }*/
+  }
 }
