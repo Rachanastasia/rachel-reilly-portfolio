@@ -198,7 +198,9 @@ section div .card:last-of-type{
 }
 
 
-
+section div a:hover{
+  color: #FFC300;
+}
 
 
 
@@ -230,9 +232,7 @@ section div .card:last-of-type{
     color: #FFC300;
   }
 
-  section div a:hover{
-    color: #FFC300;
-  }
+  
 
   section div form button:first-of-type:hover{
     color: #FFC300;
